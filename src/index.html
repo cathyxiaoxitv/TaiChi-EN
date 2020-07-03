@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TaiChi</title>
+
+</head>
+<body>
+<style id="style"></style>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+    *,*::before,*::after{
+        box-sizing: border-box;
+    }
+    #div1{
+        position: fixed;
+        top: 20px;
+        right: 100px;
+    }
+    #div1::before{
+        position: absolute;
+        content:'';
+        display: block;
+        border-radius: 50%;
+    }
+    #div1::after{
+        position: absolute;
+        content:'';
+        display: block;
+        border-radius: 50%;
+    }
+
+    @media(max-width:500px) {
+        #html{
+            height:50vh;
+            overflow: auto;
+        }
+        #div1{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+        #div1Wrapper{
+            height:50vh;
+            border:1px solid red;
+            position: relative;
+        }
+        @keyframes spin{
+            0%{
+                transform:translate(-50%,-50%) rotate(0);
+            }
+            50%{
+                transform: translate(-50%,-50%) rotate(180deg);
+            }
+            100%{
+                transform: translate(-50%,-50%) rotate(360deg);            }
+        }
+
+    }
+    #html{
+        word-break:break-all;
+    }
+</style>
+<div id="html"></div>
+<div id="div1Wrapper">
+    <div id="div1"></div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
