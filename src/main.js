@@ -15,7 +15,7 @@ let string=`/*Hello guys! I am gonna draw a taichi today.
 * Watch...*/
 #div1{
     border-radius:50%;
-    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
     border:none;
 }
 /*Taichi is made of yin and yang. Just like white and black.*/

@@ -23,35 +23,44 @@
     display: block;
     border-radius: 50%;
 }
+ @keyframes spin{
+     0%{
+         transform:rotate(0);
+     }
+     100%{
+         transform:rotate(360deg);
+ }
+ }
 
 @media(max-width:500px) {
-    #html{
-        height:50vh;
+    #html {
+        height: 50vh;
         overflow: auto;
     }
-    #div1{
+
+    #div1 {
         position: absolute;
-        top:50%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
 
     }
-    #div1Wrapper{
-        height:50vh;
-        border:1px solid red;
+
+    #div1Wrapper {
+        height: 50vh;
+        border: 1px solid red;
         position: relative;
     }
-    @keyframes spin{
-        0%{
-            transform:translate(-50%,-50%) rotate(0);
-        }
-        50%{
-            transform: translate(-50%,-50%) rotate(180deg);
-        }
-        100%{
-            transform: translate(-50%,-50%) rotate(360deg);            }
-    }
 
+    @keyframes spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+
+    }
 }
 #html{
     word-break:break-all;
